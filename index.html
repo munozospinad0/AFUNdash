@@ -161,33 +161,33 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
   <div class="alert-banner" id="alert-global"></div>
 
   <!-- KPIs DEL MES -->
-  <div class="slabel">Resumen acumulado · Abril 2026</div>
+  <div class="slabel">Resultados acumulados · Campaña programática AFUN · Abril 2026</div>
   <div class="kpi-strip">
 
     <div class="kpi" id="kpi-spend">
-      <div class="k-label">Inversión total</div>
+      <div class="k-label">Inversión ejecutada</div>
       <div class="k-val" id="v-spend">$0.00</div>
       <div class="k-sub" id="sub-spend">de $2,000 USD presupuestados (0%)</div>
       <div class="k-bar"><div class="k-fill" id="bar-spend" style="width:0%"></div></div>
     </div>
 
     <div class="kpi" id="kpi-ftd">
-      <div class="k-label">FTDs acumulados</div>
+      <div class="k-label">Nuevos registros con depósito (FTD)</div>
       <div class="k-val" id="v-ftd">0</div>
-      <div class="k-sub" id="sub-ftd">meta: 174 FTDs (0%)</div>
+      <div class="k-sub" id="sub-ftd">objetivo del mes: 174 FTDs (0%)</div>
       <div class="k-bar"><div class="k-fill" id="bar-ftd" style="width:0%"></div></div>
     </div>
 
     <div class="kpi" id="kpi-cac">
-      <div class="k-label">CAC total</div>
+      <div class="k-label">Costo por adquisición (CAC)</div>
       <div class="k-val" id="v-cac">—</div>
-      <div class="k-sub" id="sub-cac">meta: &lt; $18 USD</div>
+      <div class="k-sub" id="sub-cac">objetivo: &lt; $18 USD por cliente</div>
     </div>
 
     <div class="kpi" id="kpi-ctr">
-      <div class="k-label">CTR global</div>
+      <div class="k-label">Tasa de clic (CTR)</div>
       <div class="k-val" id="v-ctr">—</div>
-      <div class="k-sub">Display &gt;0.08% · Native &gt;0.3%</div>
+      <div class="k-sub">promedio de todas las líneas activas</div>
     </div>
 
   </div>
@@ -195,31 +195,30 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
   <!-- SEMANAS -->
   <div class="week-row">
     <div class="week-tabs">
-      <button class="wtab active" onclick="setWeek(1,this)">Sem 1<span class="wdate">31 Mar–6 Abr</span></button>
-      <button class="wtab"        onclick="setWeek(2,this)">Sem 2<span class="wdate">7–13 Abr</span></button>
-      <button class="wtab"        onclick="setWeek(3,this)">Sem 3<span class="wdate">14–20 Abr</span></button>
-      <button class="wtab"        onclick="setWeek(4,this)">Sem 4<span class="wdate">21–30 Abr</span></button>
+      <button class="wtab active" onclick="setWeek(1,this)">Semana 1<span class="wdate">31 Mar–6 Abr</span></button>
+      <button class="wtab"        onclick="setWeek(2,this)">Semana 2<span class="wdate">7–13 Abr</span></button>
+      <button class="wtab"        onclick="setWeek(3,this)">Semana 3<span class="wdate">14–20 Abr</span></button>
+      <button class="wtab"        onclick="setWeek(4,this)">Semana 4<span class="wdate">21–30 Abr</span></button>
     </div>
-    <div class="week-info" id="week-info">Sem 1 · 31 Mar – 6 Abr</div>
+    <div class="week-info" id="week-info">Semana 1 · 31 Mar – 6 Abr</div>
   </div>
 
-  <!-- RESUMEN POR TÁCTICA -->
-  <div class="slabel">Resumen por táctica · semana seleccionada</div>
+  <!-- RESUMEN POR LÍNEA -->
+  <div class="slabel">Rendimiento por línea de inversión · semana seleccionada</div>
   <div class="tactic-grid" id="tactic-grid"></div>
 
   <!-- TABLA DIARIA -->
-  <div class="slabel">Detalle diario por táctica</div>
+  <div class="slabel">Consumo diario por línea de inversión</div>
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
           <th>Fecha</th>
-          <th>Táctica</th>
+          <th>Línea</th>
           <th>Impresiones</th>
-          <th>Clicks</th>
+          <th>Clics</th>
           <th>CTR</th>
           <th>CPM (USD)</th>
-          <th>Win Rate</th>
           <th>Gasto (USD)</th>
           <th>FTDs</th>
           <th>CAC (USD)</th>
@@ -233,7 +232,7 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
 
 <!-- FOOTER -->
 <div class="footer">
-  MERGE · Campaña AFUN Basis DSP · Abril 2026 · Reporte actualizado diariamente antes de las 9:00 a.m.
+  MERGE · Campaña programática AFUN · Abril 2026 · Reporte actualizado diariamente antes de las 9:00 a.m.
 </div>
 
 <script>
@@ -247,10 +246,10 @@ const CONFIG = {
 };
 
 const TACTICS = [
-  { id:"t1", name:"Display Mobile",    geo:"CDMX · GDL · MTY", icon:"📱", ctr_type:"display" },
-  { id:"t2", name:"Display Desktop",   geo:"Nacional",          icon:"🖥",  ctr_type:"display" },
-  { id:"t3", name:"Native In-App",     geo:"DMP Mobile",        icon:"🎯", ctr_type:"native"  },
-  { id:"t4", name:"Push Notification", geo:"Horario partidos",  icon:"⚡", ctr_type:"push"    }
+  { id:"t1", name:"Display Mobile",    geo:"CDMX · Guadalajara · Monterrey", icon:"📱", ctr_type:"display" },
+  { id:"t2", name:"Display Desktop",   geo:"Cobertura nacional",              icon:"🖥",  ctr_type:"display" },
+  { id:"t3", name:"Native In-App",     geo:"Segmentos de alta intención",     icon:"🎯", ctr_type:"native"  },
+  { id:"t4", name:"Push Notification", geo:"Horario de eventos deportivos",   icon:"⚡", ctr_type:"push"    }
 ];
 
 const SEMANAS = [
@@ -356,10 +355,10 @@ function renderKPIs() {
   const banner = document.getElementById('alert-global');
   if (cac !== null && cac > 30) {
     banner.className = 'alert-banner show bad';
-    banner.innerHTML = `⚠️ <strong>Alerta:</strong> CAC global $${fmt(cac,1)} USD supera $30. Revisar tactics de bajo rendimiento y redistribuir presupuesto.`;
+    banner.innerHTML = `⚠️ <strong>Alerta:</strong> El costo por adquisición acumulado es $${fmt(cac,1)} USD, por encima del objetivo ($18 USD). Se está revisando la distribución de inversión.`;
   } else if (cac !== null && cac < 15) {
     banner.className = 'alert-banner show ok';
-    banner.innerHTML = `🚀 <strong>Oportunidad:</strong> CAC $${fmt(cac,1)} USD excelente. Considerar escalar el presupuesto.`;
+    banner.innerHTML = `🚀 <strong>Muy buen ritmo:</strong> CAC $${fmt(cac,1)} USD — por debajo del objetivo. La campaña está funcionando de manera eficiente.`;
   } else {
     banner.className = 'alert-banner';
   }
@@ -383,12 +382,13 @@ function renderTactics(weekData) {
         <div class="tc-geo">${t.geo}</div>
       </div>
       <div class="tcard-body">
-        <div class="t-row"><span class="tl">Gasto</span><span class="tv">$${fmt(spend,2)}</span></div>
+        <div class="t-row"><span class="tl">Inversión</span><span class="tv">$${fmt(spend,2)} USD</span></div>
         <div class="t-row"><span class="tl">Impresiones</span><span class="tv">${imp > 0 ? fmt(imp) : '—'}</span></div>
+        <div class="t-row"><span class="tl">Clics</span><span class="tv">${clk > 0 ? fmt(clk) : '—'}</span></div>
         <div class="t-row"><span class="tl">CTR</span><span class="tv">${ctr !== null ? fmt(ctr,3)+'%' : '—'}</span></div>
         <div class="t-row"><span class="tl">CPM</span><span class="tv">${cpm !== null ? '$'+fmt(cpm,2) : '—'}</span></div>
-        <div class="t-row"><span class="tl">FTDs</span><span class="tv">${ftd > 0 ? ftd : '—'}</span></div>
-        <div class="t-row"><span class="tl">CAC</span><span class="tv ${tc}">${cac !== null ? '$'+fmt(cac,1) : '—'}</span></div>
+        <div class="t-row"><span class="tl">Nuevos clientes (FTD)</span><span class="tv">${ftd > 0 ? ftd : '—'}</span></div>
+        <div class="t-row"><span class="tl">Costo por cliente (CAC)</span><span class="tv ${tc}">${cac !== null ? '$'+fmt(cac,1)+' USD' : '—'}</span></div>
       </div>
     </div>`;
   }).join('');
@@ -397,7 +397,7 @@ function renderTactics(weekData) {
 function renderTable(weekData) {
   const tbody = document.getElementById('tbody');
   if (weekData.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="10" class="no-data">Sin datos esta semana. Los datos se actualizan diariamente antes de las 9:00 a.m.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="9" class="no-data">Sin datos esta semana. Los datos se actualizan diariamente antes de las 9:00 a.m.</td></tr>`;
     return;
   }
 
@@ -412,7 +412,7 @@ function renderTable(weekData) {
   dates.forEach(fecha => {
     const d0  = new Date(fecha + 'T12:00:00');
     const lbl = d0.toLocaleDateString('es-MX', { weekday:'short', day:'2-digit', month:'short' });
-    html += `<tr class="day-sep"><td colspan="10">${lbl.charAt(0).toUpperCase()+lbl.slice(1)}</td></tr>`;
+    html += `<tr class="day-sep"><td colspan="9">${lbl.charAt(0).toUpperCase()+lbl.slice(1)}</td></tr>`;
 
     byDate[fecha].forEach(d => {
       const ctr  = d.imp > 0 ? d.clk / d.imp * 100 : null;
@@ -427,10 +427,9 @@ function renderTable(weekData) {
         <td>${fmt(d.clk)}</td>
         <td>${ctr!==null ? fmt(ctr,3)+'%' : '—'}</td>
         <td>${cpm!==null ? '$'+fmt(cpm,2) : '—'}</td>
-        <td>${d.wr > 0 ? d.wr+'%' : '—'}</td>
         <td>$${fmt(d.spend,2)}</td>
         <td>${d.ftd > 0 ? d.ftd : '—'}</td>
-        <td class="${cc}">${cac!==null ? '$'+fmt(cac,1) : '—'}</td>
+        <td class="${cc}">${cac!==null ? '$'+fmt(cac,1)+' USD' : '—'}</td>
       </tr>`;
     });
   });
@@ -446,10 +445,9 @@ function renderTable(weekData) {
     <td>${fmt(totClk)}</td>
     <td>${totCtr!==null ? fmt(totCtr,3)+'%' : '—'}</td>
     <td>${totCpm!==null ? '$'+fmt(totCpm,2) : '—'}</td>
-    <td>—</td>
     <td>$${fmt(totSpend,2)}</td>
     <td>${totFtd > 0 ? totFtd : '—'}</td>
-    <td class="${cacClass(totCac)}">${totCac!==null ? '$'+fmt(totCac,1) : '—'}</td>
+    <td class="${cacClass(totCac)}">${totCac!==null ? '$'+fmt(totCac,1)+' USD' : '—'}</td>
   </tr>`;
 
   tbody.innerHTML = html;
