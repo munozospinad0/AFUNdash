@@ -165,8 +165,7 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
     <div class="kpi" id="kpi-spend">
       <div class="k-label">Inversión ejecutada</div>
       <div class="k-val" id="v-spend">$0.00</div>
-      <div class="k-sub" id="sub-spend">de $2,000 USD presupuestados (0%)</div>
-      <div class="k-bar"><div class="k-fill" id="bar-spend" style="width:0%"></div></div>
+      <div class="k-sub" id="sub-spend">Total acumulado</div>
     </div>
 
     <div class="kpi" id="kpi-ftd">
@@ -331,13 +330,10 @@ function renderKPIs() {
   const tClk   = DATA.reduce((s,d) => s+d.clk,   0);
   const cac    = tFtd > 0  ? tSpend / tFtd : null;
   const ctr    = tImp > 0  ? tClk  / tImp * 100 : null;
-  const pctB   = Math.min(100, tSpend / CONFIG.presupuesto * 100);
   const pctF   = Math.min(100, tFtd   / CONFIG.meta_ftd    * 100);
 
   // Spend
   document.getElementById('v-spend').textContent = '$' + fmt(tSpend, 2);
-  document.getElementById('sub-spend').textContent = `de $${CONFIG.presupuesto.toLocaleString()} USD presupuestados (${fmt(pctB,1)}%)`;
-  document.getElementById('bar-spend').style.width = pctB + '%';
 
   // FTDs
   document.getElementById('v-ftd').textContent = tFtd;
