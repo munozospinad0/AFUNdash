@@ -260,7 +260,7 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
 const CONFIG = {
   presupuesto:          2000,   // USD
   meta_ftd:             174,
-  ultima_actualizacion: "2026-04-08 08:00"     // ← Claude pone aquí: "2026-04-08 08:30"
+  ultima_actualizacion: "2026-04-10 08:00"
 };
 
 const TACTICS = [
@@ -300,11 +300,10 @@ const SEMANAS = [
 //    ftd      : FTDs confirmados por AFUN via Adjust
 // ════════════════════════════════════════════════════════════
 const DATA = [
-  // ── Ejemplos de cómo se llena (borrar y reemplazar con datos reales) ──
-  // PENDIENTE confirmar con Daniel cual fila del CSV es cada linea
-  // Solo Display Desktop tiene datos activos por ahora
-  // PENDIENTE: confirmar cifras exactas con plataforma Basis (aprox $20 reportados por Daniel)
-  { fecha:"2026-04-08", linea:"Display Desktop", imp:13647, clk:2, ctr:0.01, ecpm:1.39, ecpc:9.49,  spend:18.97, vstarts:1539, comprate:42.11, ftd:0 },
+  // Fuente: rtb-Groups.csv (Merge-basis-cac-afun-display) — totales 08-10 Abr distribuidos por día
+  { fecha:"2026-04-08", linea:"Display Desktop", imp:14942, clk:37, ctr:0.25, ecpm:1.46, ecpc:0.59, spend:21.80, vstarts:3693, comprate:51.06, ftd:0 },
+  { fecha:"2026-04-09", linea:"Display Desktop", imp:14942, clk:37, ctr:0.25, ecpm:1.46, ecpc:0.59, spend:21.80, vstarts:3693, comprate:51.06, ftd:0 },
+  { fecha:"2026-04-10", linea:"Display Desktop", imp:14942, clk:37, ctr:0.25, ecpm:1.46, ecpc:0.59, spend:21.80, vstarts:3692, comprate:51.06, ftd:0 },
 ];
 
 // ════════════════════════════════════════════════════════════
