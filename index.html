@@ -68,7 +68,7 @@ body { font-family:'Segoe UI',Arial,sans-serif; background:var(--bg); color:var(
 .week-info { font-size:12px; color:var(--sub); background:var(--white); border:1px solid var(--border); border-radius:8px; padding:7px 14px; }
 
 /* TACTIC CARDS */
-.tactic-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:28px; }
+.tactic-grid { display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:28px; max-width:500px; }
 .tcard { background:var(--white); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
 .tcard-head { background:var(--navy); padding:12px 16px; }
 .tcard-head .tc-name { font-weight:700; font-size:13px; color:#fff; }
@@ -264,10 +264,10 @@ const CONFIG = {
 };
 
 const TACTICS = [
-  // LAL y RMK temporalmente desactivados — se agregan cuando arranquen en Basis
+  // Temporalmente solo Display Desktop — se agregan más tácticas cuando arranquen en Basis
   // { id:"t1", name:"LAL",             geo:"Lookalike Audience",    icon:"🎯", ctr_type:"display" },
   // { id:"t2", name:"RMK",             geo:"Remarketing",           icon:"🔄", ctr_type:"display" },
-  { id:"t3", name:"Display Mobile",  geo:"Campaña Móvil",         icon:"📱", ctr_type:"display" },
+  // { id:"t3", name:"Display Mobile",  geo:"Campaña Móvil",         icon:"📱", ctr_type:"display" },
   { id:"t4", name:"Display Desktop", geo:"Campaña Desktop",       icon:"🖥", ctr_type:"display" },
 ];
 
