@@ -108,6 +108,19 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
 
 /* FOOTER */
 .footer { text-align:center; padding:20px; font-size:11px; color:var(--sub); border-top:1px solid var(--border); margin-top:10px; }
+.optim-section { margin-bottom:28px; }
+.optim-title { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--label); margin-bottom:14px; }
+.optim-log { background:var(--white); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.optim-entry { padding:14px 18px; border-bottom:1px solid var(--border); display:flex; gap:14px; align-items:flex-start; }
+.optim-entry:last-child { border-bottom:none; }
+.optim-date { font-size:11px; font-weight:700; color:var(--indigo); white-space:nowrap; min-width:70px; }
+.optim-badge { font-size:9px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; padding:2px 8px; border-radius:4px; white-space:nowrap; }
+.optim-badge.done { background:#DCFCE7; color:#166534; }
+.optim-badge.pending { background:#FEF9C3; color:#854D0E; }
+.optim-badge.blocked { background:#FEE2E2; color:#991B1B; }
+.optim-detail { font-size:13px; color:var(--body); line-height:1.5; }
+.optim-detail strong { color:var(--indigo); }
+.optim-impact { font-size:11px; color:var(--sub); margin-top:3px; }
 
 /* ALERT BANNER */
 .alert-banner { background:var(--card); border:1px solid var(--border); border-left:4px solid var(--indigo); border-radius:0 8px 8px 0; padding:12px 16px; font-size:13px; color:var(--body); margin-bottom:24px; display:none; }
@@ -244,6 +257,80 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
   </div>
   <div style="font-size:11px;color:var(--sub);margin-top:-20px;margin-bottom:28px;padding:0 4px;">
     * FTDs reportados por AFUN via Adjust (pueden tener 24-48h de retraso) &nbsp;·&nbsp; Gasto = Total Spend de Basis DSP
+  </div>
+
+  <!-- OPTIMIZACIONES -->
+  <div class="optim-section">
+    <div class="optim-title">Ajustes y optimizaciones aplicadas</div>
+    <div class="optim-log">
+
+      <div class="optim-entry">
+        <div class="optim-date">13 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Blocklist de dominios/apps irrelevantes</strong>
+          </div>
+          <div class="optim-impact">1,100 dominios/apps bloqueados (infantiles, religiosos, belleza, puzzles casuales). Impacto estimado: ~39% del inventario redirigido a sitios relevantes (deportes, gaming, finanzas).</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">13 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Supply Path Optimization (Ads.txt)</strong>
+          </div>
+          <div class="optim-impact">Activada exclusión de sitios sin Ads.txt para eliminar inventario fraudulento y mejorar calidad de impresiones.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">13 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Content Targeting por categoría</strong>
+          </div>
+          <div class="optim-impact">Configuradas 10 categorías de contenido relevantes: Sports, Video Gaming, Business & Finance, Entertainment, entre otras. Categorías irrelevantes excluidas.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">13 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Audiencias LAL y RMK creadas</strong>
+          </div>
+          <div class="optim-impact">Listas de Device IDs cargadas en Basis: LAL Primer Depósito (243 IDs) y RMK Sin Depósito (212 IDs). Listas para activarse cuando se lancen esas líneas de campaña.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">13 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge pending">Pendiente</span>
+            <strong>Tracking de conversiones (Adjust MMP)</strong>
+          </div>
+          <div class="optim-impact">Sin datos de Adjust no es posible medir FTDs ni optimizar por CAC. Requiere coordinación con AFUN para compartir postbacks de conversión.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">13 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge pending">Pendiente</span>
+            <strong>Pausar creatividades de bajo rendimiento</strong>
+          </div>
+          <div class="optim-impact">Video ad 3 (Audio) con 0 impresiones. Videos 1, 2 y 6 con completion rate ~22%. Recomendación: pausar y concentrar en Video ad 4 (83% completion).</div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </div>
