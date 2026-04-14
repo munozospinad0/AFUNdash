@@ -259,6 +259,36 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
     * FTDs reportados por AFUN via Adjust (pueden tener 24-48h de retraso) &nbsp;·&nbsp; Gasto = Total Spend de Basis DSP
   </div>
 
+  <!-- OTROS MEDIOS: WORTISE -->
+  <div class="slabel">Otros medios · Wortise · Interstitial CPM · Colombia</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Impresiones</th>
+          <th>Clics</th>
+          <th>CTR</th>
+          <th>Usuarios</th>
+          <th>Frecuencia</th>
+          <th>Gasto (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>08/04</td><td>2,265</td><td>188</td><td>8.30%</td><td>1,294</td><td>1.75</td><td>$47.00</td></tr>
+        <tr><td>09/04</td><td>1,710</td><td>176</td><td>10.29%</td><td>755</td><td>2.26</td><td>$44.00</td></tr>
+        <tr><td>10/04</td><td>2,008</td><td>176</td><td>8.76%</td><td>989</td><td>2.03</td><td>$44.00</td></tr>
+        <tr><td>11/04</td><td>1,841</td><td>177</td><td>9.61%</td><td>954</td><td>1.93</td><td>$44.00</td></tr>
+        <tr><td>12/04</td><td>1,774</td><td>174</td><td>9.81%</td><td>1,102</td><td>1.61</td><td>$44.00</td></tr>
+        <tr style="font-weight:700;background:var(--card);">
+          <td>Total</td><td>9,598</td><td>891</td><td>9.28%</td><td>5,094</td><td>1.88</td><td>$223.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:11px;color:var(--sub);margin-top:-20px;margin-bottom:28px;padding:0 4px;">
+    Objetivo: 4,000 clics · Entregado: 891 (22.28%) · Formato: Interstitial CPM · Mercado: Colombia
+  </div>
+
   <!-- OPTIMIZACIONES -->
   <div class="optim-section">
     <div class="optim-title">Ajustes y optimizaciones aplicadas</div>
@@ -309,6 +339,28 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
       </div>
 
       <div class="optim-entry">
+        <div class="optim-date">14 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Campaña RMK activada en Basis</strong>
+          </div>
+          <div class="optim-impact">Línea de Remarketing (Merge-basis-cac-afun-display-RMK) puesta online. Primeras impresiones registradas. Bid: $0.75 CPM.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">14 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Inventario post-blocklist validado</strong>
+          </div>
+          <div class="optim-impact">Primer día con blocklist activa: 0 apps de puzzles/bibles/makeup en Domains. Inventario concentrado en noticias MX, deportes, gaming y tech. Blocklist funcionando correctamente.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
         <div class="optim-date">13 Abr</div>
         <div style="flex:1">
           <div class="optim-detail">
@@ -347,7 +399,7 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
 const CONFIG = {
   presupuesto:          2000,   // USD
   meta_ftd:             174,
-  ultima_actualizacion: "2026-04-13 08:00"
+  ultima_actualizacion: "2026-04-14 09:00"
 };
 
 const TACTICS = [
@@ -395,6 +447,8 @@ const DATA = [
   { fecha:"2026-04-11", linea:"Display Desktop", imp:15610, clk:35, ctr:0.23, ecpm:1.48, ecpc:0.65, spend:23.05, vstarts:3386, comprate:51.55, ftd:0 },
   { fecha:"2026-04-12", linea:"Display Desktop", imp:15610, clk:35, ctr:0.23, ecpm:1.48, ecpc:0.65, spend:23.05, vstarts:3386, comprate:51.55, ftd:0 },
   { fecha:"2026-04-13", linea:"Display Desktop", imp:15610, clk:35, ctr:0.23, ecpm:1.48, ecpc:0.65, spend:23.05, vstarts:3386, comprate:51.55, ftd:0 },
+  // Semana 2 — datos diarios post-optimización (blocklist + ads.txt activos)
+  { fecha:"2026-04-14", linea:"Display Desktop", imp:2427, clk:1, ctr:0.04, ecpm:1.45, ecpc:3.53, spend:3.53, vstarts:1977, comprate:46.69, ftd:0 },
 ];
 
 // ════════════════════════════════════════════════════════════
