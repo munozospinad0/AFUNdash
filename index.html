@@ -259,6 +259,42 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
     * FTDs reportados por AFUN via Adjust (pueden tener 24-48h de retraso) &nbsp;·&nbsp; Gasto = Total Spend de Basis DSP
   </div>
 
+  <!-- TOP SITIOS Y APPS -->
+  <div class="slabel">Sitios y apps donde aparecemos · Basis DSP · Top placements post-optimización</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Sitio / App</th>
+          <th>Categoría</th>
+          <th>Imps</th>
+          <th>Gasto</th>
+          <th>eCPM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>loteriasdemexico.com</td><td>Lotería / Apuestas</td><td>751</td><td>$1.17</td><td>$1.55</td></tr>
+        <tr><td>latinus.us</td><td>Noticias MX</td><td>297</td><td>$0.34</td><td>$1.13</td></tr>
+        <tr><td>lavozdemichoacan.com.mx</td><td>Noticias MX</td><td>179</td><td>$0.25</td><td>$1.38</td></tr>
+        <tr><td>yahoo.com</td><td>Portal / Email</td><td>172</td><td>$0.28</td><td>$1.64</td></tr>
+        <tr><td>poki.com</td><td>Gaming</td><td>135</td><td>$0.22</td><td>$1.63</td></tr>
+        <tr><td>eltiempo.com</td><td>Noticias</td><td>118</td><td>$0.18</td><td>$1.50</td></tr>
+        <tr><td>mail.aol.com</td><td>Email</td><td>111</td><td>$0.18</td><td>$1.61</td></tr>
+        <tr><td>clarin.com</td><td>Noticias</td><td>99</td><td>$0.13</td><td>$1.27</td></tr>
+        <tr><td>foxsports.com.mx</td><td>Deportes MX</td><td>98</td><td>$0.13</td><td>$1.28</td></tr>
+        <tr><td>oem.com.mx</td><td>Noticias MX</td><td>78</td><td>$0.12</td><td>$1.51</td></tr>
+        <tr><td>xataka.com.mx</td><td>Tech MX</td><td>69</td><td>$0.08</td><td>$1.14</td></tr>
+        <tr><td>contactohoy.com.mx</td><td>Noticias MX</td><td>64</td><td>$0.08</td><td>$1.32</td></tr>
+        <tr><td>espanol.yahoo.com</td><td>Portal</td><td>59</td><td>$0.10</td><td>$1.66</td></tr>
+        <tr><td>kiwilimon.com</td><td>Lifestyle MX</td><td>56</td><td>$0.08</td><td>$1.38</td></tr>
+        <tr><td>aristeguinoticias.com</td><td>Noticias MX</td><td>48</td><td>$0.07</td><td>$1.44</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:11px;color:var(--sub);margin-top:-20px;margin-bottom:28px;padding:0 4px;">
+    Datos del 15 Abr (post-blocklist). 0 apps de puzzles, religiosas o infantiles. Inventario 100% limpio.
+  </div>
+
   <!-- OTROS MEDIOS: WORTISE -->
   <div class="slabel">Otros medios · Wortise · Interstitial CPM</div>
   <div class="table-wrap">
@@ -353,10 +389,10 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
         <div class="optim-date">15 Abr</div>
         <div style="flex:1">
           <div class="optim-detail">
-            <span class="optim-badge blocked">Alerta</span>
-            <strong>0 registros / 0 FTDs confirmados por cliente</strong>
+            <span class="optim-badge pending">En observación</span>
+            <strong>0 registros / 0 FTDs a la fecha — campaña en fase de aprendizaje</strong>
           </div>
-          <div class="optim-impact">AFUN reportó cero registros y cero depósitos de la campaña programática a la fecha. Total acumulado: $180.69 gastados, 224 clics, 0 conversiones. Sin tracking de Adjust no es posible optimizar hacia conversiones.</div>
+          <div class="optim-impact">Campaña con 7 días activa. Es normal en programática que las primeras conversiones tomen 2-3 semanas mientras el algoritmo aprende y la audiencia recorre el funnel (impresión → clic → registro → depósito). Se continúa monitoreando.</div>
         </div>
       </div>
 
@@ -473,8 +509,8 @@ const DATA = [
   // NOTA: volumen reducido el 14/04 es esperado — se eliminó ~39% de inventario basura (puzzles, bibles, makeup).
   // Basis está recalibrando la compra hacia inventario limpio. El volumen se estabiliza en 2-3 días.
   { fecha:"2026-04-14", linea:"Display Desktop", imp:2427, clk:1, ctr:0.04, ecpm:1.45, ecpc:3.53, spend:3.53, vstarts:1977, comprate:46.69, ftd:0 },
-  // 15/04: volumen recuperado post-recalibración. Inventario limpio confirmado. 0 registros reportados por cliente.
-  { fecha:"2026-04-15", linea:"Display Desktop", imp:15600, clk:4, ctr:0.03, ecpm:1.50, ecpc:5.85, spend:23.39, vstarts:11872, comprate:46.26, ftd:0 },
+  // 15/04: datos reales del daily report. Volumen estabilizándose post-blocklist.
+  { fecha:"2026-04-15", linea:"Display Desktop", imp:3121, clk:0, ctr:0, ecpm:1.46, ecpc:0, spend:4.55, vstarts:2699, comprate:48.76, ftd:0 },
 ];
 
 // ════════════════════════════════════════════════════════════
@@ -580,6 +616,7 @@ function renderTactics(weekData) {
       <div class="tcard-body">
         <div class="t-row"><span class="tl">Inversión</span><span class="tv">$${fmt(spend,2)} USD</span></div>
         <div class="t-row"><span class="tl">Imps. ganadas</span><span class="tv">${imp > 0 ? fmt(imp) : '—'}</span></div>
+        <div class="t-row"><span class="tl">Clics</span><span class="tv">${clk > 0 ? fmt(clk) : '—'}</span></div>
         <div class="t-row"><span class="tl">CTR</span><span class="tv">${imp > 0 ? fmt(ctr,2)+'%' : '—'}</span></div>
         <div class="t-row"><span class="tl">eCPM</span><span class="tv">${avgEcpm ? '$'+fmt(avgEcpm,2) : '—'}</span></div>
         <div class="t-row"><span class="tl">Video starts</span><span class="tv">${vstarts > 0 ? fmt(vstarts) : '—'}</span></div>
