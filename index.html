@@ -350,6 +350,28 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
       </div>
 
       <div class="optim-entry">
+        <div class="optim-date">15 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge blocked">Alerta</span>
+            <strong>0 registros / 0 FTDs confirmados por cliente</strong>
+          </div>
+          <div class="optim-impact">AFUN reportó cero registros y cero depósitos de la campaña programática a la fecha. Total acumulado: $180.69 gastados, 224 clics, 0 conversiones. Sin tracking de Adjust no es posible optimizar hacia conversiones.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">15 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Volumen recuperado post-blocklist</strong>
+          </div>
+          <div class="optim-impact">15 Abr: 15,600 imps (vs 2,427 el 14 Abr). Basis recalibró la compra hacia inventario limpio. Domains confirmados: foxsports.com.mx, levelup.com, loteriasdemexico.com, xataka.com.mx, aristeguinoticias.com. Cero apps basura.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
         <div class="optim-date">14 Abr</div>
         <div style="flex:1">
           <div class="optim-detail">
@@ -399,7 +421,7 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
 const CONFIG = {
   presupuesto:          2000,   // USD
   meta_ftd:             174,
-  ultima_actualizacion: "2026-04-14 09:00"
+  ultima_actualizacion: "2026-04-15 09:00"
 };
 
 const TACTICS = [
@@ -451,6 +473,8 @@ const DATA = [
   // NOTA: volumen reducido el 14/04 es esperado — se eliminó ~39% de inventario basura (puzzles, bibles, makeup).
   // Basis está recalibrando la compra hacia inventario limpio. El volumen se estabiliza en 2-3 días.
   { fecha:"2026-04-14", linea:"Display Desktop", imp:2427, clk:1, ctr:0.04, ecpm:1.45, ecpc:3.53, spend:3.53, vstarts:1977, comprate:46.69, ftd:0 },
+  // 15/04: volumen recuperado post-recalibración. Inventario limpio confirmado. 0 registros reportados por cliente.
+  { fecha:"2026-04-15", linea:"Display Desktop", imp:15600, clk:4, ctr:0.03, ecpm:1.50, ecpc:5.85, spend:23.39, vstarts:11872, comprate:46.26, ftd:0 },
 ];
 
 // ════════════════════════════════════════════════════════════
