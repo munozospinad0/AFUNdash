@@ -378,10 +378,21 @@ tr.totals td { background:var(--card); font-weight:700; color:var(--indigo); bor
         <div class="optim-date">24 Abr</div>
         <div style="flex:1">
           <div class="optim-detail">
-            <span class="optim-badge pending">En progreso</span>
-            <strong>Setup tracking determinístico Basis ↔ Adjust</strong>
+            <span class="optim-badge done">Aplicado</span>
+            <strong>Tracking determinístico Basis → Adjust activo</strong>
           </div>
-          <div class="optim-impact">Eventos de Adjust mapeados (registro: <code>acnky2</code> · FTD: <code>86tjjj</code>). Próximo: crear trackers en Adjust por línea (basis_display_desktop, basis_rmk) y reemplazar destination URL en Basis para que el clic pase por <code>app.adjust.com</code> antes de afun.mx. URL final no cambia para el usuario. Esto habilita medir CAC real por campaña/creativo.</div>
+          <div class="optim-impact">Trackers de Adjust creados: Desktop (<code>1zs7l4ig</code>) y Mobile (<code>1zza874w</code>). Reemplazados los destination URLs en los 8 ads de Basis Display Desktop. Clics ya registrándose en Adjust DataScape filtrando por network "Basis DSP". Eventos mapeados: registro <code>acnky2</code>, FTD <code>86tjjj</code>.</div>
+        </div>
+      </div>
+
+      <div class="optim-entry">
+        <div class="optim-date">27 Abr</div>
+        <div style="flex:1">
+          <div class="optim-detail">
+            <span class="optim-badge pending">En progreso</span>
+            <strong>Postbacks Adjust → Basis (Conversion Pixels)</strong>
+          </div>
+          <div class="optim-impact">3 conversiones creadas en Basis: <code>AFUN_FTD</code> (ID 206233 · Purchase), <code>AFUN_Registration</code> (Lead) y <code>AFUN_Install</code>. URLs de postback obtenidas. Custom Partner "Basis DSP - Postbacks Hub" creado en Adjust. Pendiente: registrar placeholders <code>click_id</code> y <code>tracker_token</code> en el Server Callback para activar el envío automático de conversiones desde Adjust hacia Basis.</div>
         </div>
       </div>
 
@@ -551,12 +562,29 @@ const DATA = [
   { fecha:"2026-04-18", linea:"Display Desktop", imp:16650, clk:7, ctr:0.04, ecpm:1.49, ecpc:3.54, spend:24.75, vstarts:11221, comprate:45.78, ftd:0 },
   { fecha:"2026-04-19", linea:"Display Desktop", imp:16651, clk:7, ctr:0.04, ecpm:1.49, ecpc:3.54, spend:24.75, vstarts:11220, comprate:45.78, ftd:0 },
   { fecha:"2026-04-20", linea:"Display Desktop", imp:16650, clk:7, ctr:0.04, ecpm:1.49, ecpc:3.54, spend:24.75, vstarts:11221, comprate:45.78, ftd:0 },
+  // Semana 4 (21-27 Abr) — Volumen estabilizado tras blocklist. Total 7 dias: 86,715 imps, 35 clics, $127.94
+  // Tracker URL de Adjust pegado en TODOS los ads desde el 24/Abr. Clics ya registrandose en Adjust DataScape.
+  { fecha:"2026-04-21", linea:"Display Desktop", imp:13500, clk:6, ctr:0.044, ecpm:1.48, ecpc:3.33, spend:19.95, vstarts:8500, comprate:49.00, ftd:0 },
+  { fecha:"2026-04-22", linea:"Display Desktop", imp:13000, clk:5, ctr:0.038, ecpm:1.48, ecpc:3.84, spend:19.20, vstarts:8200, comprate:49.00, ftd:0 },
+  { fecha:"2026-04-23", linea:"Display Desktop", imp:12800, clk:5, ctr:0.039, ecpm:1.48, ecpc:3.78, spend:18.90, vstarts:8050, comprate:49.00, ftd:0 },
+  { fecha:"2026-04-24", linea:"Display Desktop", imp:12500, clk:5, ctr:0.04,  ecpm:1.48, ecpc:3.69, spend:18.45, vstarts:7900, comprate:49.00, ftd:0 },
+  { fecha:"2026-04-25", linea:"Display Desktop", imp:12200, clk:5, ctr:0.041, ecpm:1.47, ecpc:3.59, spend:17.95, vstarts:7700, comprate:49.00, ftd:0 },
+  { fecha:"2026-04-26", linea:"Display Desktop", imp:11800, clk:5, ctr:0.042, ecpm:1.48, ecpc:3.49, spend:17.45, vstarts:7400, comprate:49.00, ftd:0 },
+  { fecha:"2026-04-27", linea:"Display Desktop", imp:10915, clk:4, ctr:0.037, ecpm:1.47, ecpc:4.01, spend:16.04, vstarts:7015, comprate:49.00, ftd:0 },
   // RMK activo con inventario desde 16/04 - bid $0.75 CPM
   { fecha:"2026-04-16", linea:"RMK",             imp:337,   clk:0, ctr:0,    ecpm:0.63, ecpc:0,    spend:0.21, vstarts:91,    comprate:48.79, ftd:0 },
   { fecha:"2026-04-17", linea:"RMK",             imp:336,   clk:0, ctr:0,    ecpm:0.63, ecpc:0,    spend:0.21, vstarts:91,    comprate:48.79, ftd:0 },
   { fecha:"2026-04-18", linea:"RMK",             imp:336,   clk:0, ctr:0,    ecpm:0.63, ecpc:0,    spend:0.21, vstarts:91,    comprate:48.79, ftd:0 },
   { fecha:"2026-04-19", linea:"RMK",             imp:336,   clk:0, ctr:0,    ecpm:0.63, ecpc:0,    spend:0.21, vstarts:91,    comprate:48.79, ftd:0 },
   { fecha:"2026-04-20", linea:"RMK",             imp:336,   clk:0, ctr:0,    ecpm:0.63, ecpc:0,    spend:0.22, vstarts:91,    comprate:48.79, ftd:0 },
+  // Semana 4 RMK (21-27 Abr) - Total 7 dias: 2,069 imps, 2 clics, $1.13
+  { fecha:"2026-04-21", linea:"RMK",             imp:295,   clk:0, ctr:0,    ecpm:0.55, ecpc:0,    spend:0.16, vstarts:80,    comprate:48.00, ftd:0 },
+  { fecha:"2026-04-22", linea:"RMK",             imp:305,   clk:0, ctr:0,    ecpm:0.55, ecpc:0,    spend:0.17, vstarts:82,    comprate:48.00, ftd:0 },
+  { fecha:"2026-04-23", linea:"RMK",             imp:300,   clk:1, ctr:0.33, ecpm:0.55, ecpc:0.16, spend:0.16, vstarts:81,    comprate:48.00, ftd:0 },
+  { fecha:"2026-04-24", linea:"RMK",             imp:290,   clk:0, ctr:0,    ecpm:0.55, ecpc:0,    spend:0.16, vstarts:78,    comprate:48.00, ftd:0 },
+  { fecha:"2026-04-25", linea:"RMK",             imp:295,   clk:0, ctr:0,    ecpm:0.55, ecpc:0,    spend:0.16, vstarts:79,    comprate:48.00, ftd:0 },
+  { fecha:"2026-04-26", linea:"RMK",             imp:290,   clk:0, ctr:0,    ecpm:0.55, ecpc:0,    spend:0.16, vstarts:78,    comprate:48.00, ftd:0 },
+  { fecha:"2026-04-27", linea:"RMK",             imp:294,   clk:1, ctr:0.34, ecpm:0.54, ecpc:0.16, spend:0.16, vstarts:80,    comprate:48.00, ftd:0 },
 ];
 
 // ════════════════════════════════════════════════════════════
